@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title') {{__('About | Edit')}} @endsection
+@section('title') {{__('Banner')}} @endsection
 @section('content')
 
 <div class="container-fluid">

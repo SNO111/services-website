@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\LandingPage;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -16,6 +17,18 @@ class ServiceController extends Controller
     {
         $services = Service::all();
         return view('admin.services.index', compact('services'));
+    }
+
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function frontIndex()
+    {
+        $services = Service::all();
+        $servlan = LandingPage::where('id', 1)->value('our_services');
+        return view('front.services', compact(['services', 'servlan']));
     }
 
     /**

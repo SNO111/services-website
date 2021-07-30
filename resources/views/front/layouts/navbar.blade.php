@@ -40,7 +40,7 @@
               </a>
           </li>
           <li class="nav-item dropdown dropdown-hover mx-2">
-            <a href="#" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" >
+            <a href="{{ route('blog') }}" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" >
               Blog
             </a>
           </li>

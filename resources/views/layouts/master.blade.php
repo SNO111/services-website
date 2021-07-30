@@ -9,7 +9,6 @@
     <meta name="author" content="">
     <title> @yield('title') </title>
     @include('layouts.style')
-    @stack('styles')
 </head>
 <body>
     <!-- ============================================================== -->
@@ -76,6 +75,7 @@
     <!-- ============================================================== -->
 
         @include('layouts.scripts')
+        @stack('script')
 
     </body>
 

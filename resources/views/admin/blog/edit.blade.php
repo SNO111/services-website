@@ -31,7 +31,7 @@
         <form class="pt-4" method="post" action="{{ route('blog.update' , $post->slug) }}">
             @csrf
             @method('PUT')
-            <input type="hidden" name="post_id" id="post_id" value="{{ $post->id }}{{ old('post_id') }}">
+            <input type="hidden" name="post_id" id="post_id" value="{{ $post->id }}">
             <div class="form-group">    
                 <label for="title">Title:</label>
                 <input type="text" class="form-control" name="title" id="title" value="@if ( !old('title')) {{ $post->title }} @endif {{ old('title') }}" placeholder="{{ __('Title') }}"/>

@@ -25,6 +25,17 @@ class BlogController extends Controller
     }
 
 
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function allPost()
+    {
+        $blog = Blog::where('id','!=',Null)->orderBy('created_at','desc')->paginate(10);
+        return view('front.blog.index', compact('blog'));
+    }
+
     public function CountAll()
     {
         $posts = Blog::all()->count();
@@ -89,7 +100,8 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        $article = Blog::find($id);
+        return view('front.blog.single_article')->with('post', $article);
     }
 
     /**

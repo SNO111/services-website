@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Database\Eloquent\Model;
+use App\Models\Blog;
+use App\Models\Service;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,4 +28,21 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function Counter()
+    {
+        $articles = Blog::where('active',1)->count();
+        return view('admin.dashboard', compact('articles'));
+    }
+
+    public function latest_added() {
+        $blog = Blog::where('id','!=',Null)->orderBy('created_at','desc')->paginate(3);
+        $services = Service::where('id','!=',Null)->orderBy('created_at','desc')->paginate(3);
+        $mailbox = Contact::where('id','!=',Null)->orderBy('created_at','desc')->paginate(3);
+
+        return view('admin.dashboard', compact(['blog', 'services', 'mailbox']));
+    }
+
+
+
 }

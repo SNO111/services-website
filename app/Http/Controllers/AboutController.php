@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Statistics;
 use App\Http\Requests\AboutForm;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,19 @@ class AboutController extends Controller
         $about = About::where('id', 1)->first();
         return view('admin.about.index', compact('about'));
     }
+
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function LandingAboutindex()
+    {
+        $about = About::all();
+        $stats = Statistics::all();
+        return view('front.about_us', compact('about','stats'));
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -141,6 +155,9 @@ class AboutController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $about = About::find($id); 
+        $about->delete();
+
+        return back()->with('status', 'About detalis deleted successfully');
     }
 }

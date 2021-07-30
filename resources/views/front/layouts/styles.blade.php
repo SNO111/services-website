@@ -9,9 +9,9 @@
       <link href="{{ asset('front/css/nucleo-svg.css') }}" rel="stylesheet" />
       <!-- Font Awesome Icons -->
       <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-      <link href="{{ asset('frontend/css/nucleo-svg.css')}}" rel="stylesheet" />
+      <link href="{{ asset('front/css/nucleo-svg.css')}}" rel="stylesheet" />
       <!-- CSS Files -->
-      <link id="pagestyle" href="{{ asset('frontend/css/soft-design-system.css?v=1.0.2')}}" rel="stylesheet" />
+      <link id="pagestyle" href="{{ asset('front/css/soft-design-system.css?v=1.0.2')}}" rel="stylesheet" />
         <!--  -->
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -20,3 +20,4 @@
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <link href="{{ asset('front/css/nucleo-svg.css') }}" rel="stylesheet" />
+  

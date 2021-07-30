@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title') {{__('About')}} @endsection
+@section('title') {{__('Feature')}} @endsection
 @push('styles')
     <link href="{{ asset('admin/css/FlipSwitch.css') }}" rel="stylesheet">
 @endpush
@@ -74,6 +74,11 @@
         </div>
         <a class="btn btn-info" href="{{ route('about.edit', $about->id ) }}">Edit</a>
                 
+        <form class="float-right" method="Post" action="{{ route('about.destroy', $about->id ) }}">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger" type="submit" name="delete">Delete</button>
+        </form>
     @endif
 
 </div>

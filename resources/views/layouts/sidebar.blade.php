@@ -8,9 +8,9 @@
                         aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                             class="hide-menu">Visit Site</span></a></li>
                 <li class="list-divider"></li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('dashboard') }}"
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('statistics') }}"
                     aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
-                        class="hide-menu">Dashboard</span></a></li>
+                        class="hide-menu">Statistics</span></a></li>
                 <li class="list-divider"></li>
                 <li class="nav-small-cap"><span class="hide-menu">Applications</span></li>
 
@@ -34,10 +34,23 @@
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('blog.index') }}"
                     aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i>
                     <span class="hide-menu">Blog </span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('portfolio.index') }}"
+                    aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i>
+                    <span class="hide-menu">Portfolio </span></a></li>                      
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('mailbox') }}"
                         aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
                             class="hide-menu">Mail Box </span></a>
                 </li>
+                <li class="list-divider"></li>
+                <li class="nav-small-cap"><span class="hide-menu">Settings</span></li>
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('landing.index') }}"
+                        aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
+                            class="hide-menu">Landing Page </span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('stats') }}"
+                    aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
+                        class="hide-menu">All Statistics</span></a></li>
+
+
                 <li class="list-divider"></li>
                 <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
                 <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../../docs/docs.html"
